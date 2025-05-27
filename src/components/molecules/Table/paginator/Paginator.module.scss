@@ -1,0 +1,90 @@
+@import '../../../../assets/styles/colors/colors';
+
+.paginator-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.25rem;
+  user-select: none;
+}
+
+.paginator {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.page-item,
+.page-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: var(--font-size-12);
+  font-weight: 600;
+  background-color: $white;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 1rem;
+  &:hover {
+    background-color: $lightBlue_color;
+    color: $primary_color;
+  }
+
+  &.active {
+    color: $white;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    color: $cancel_color;
+    border-color: $lightBlue_color;
+  }
+}
+
+.page-arrow {
+  color: $primary_color;
+  background-color: $primary_color;
+  border: 1px solid $lightBlue_color;
+  border-radius: 0.25rem;
+
+  &:hover:not(.disabled) {
+    background-color: $primary_color;
+    color: $primary_color;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    color: $cancel_color;
+    border-color: $primary_color;
+    background: $primary_color;
+  }
+}
+
+.arrow-left {
+  transform: rotate(180deg);
+}
+.ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 2rem;
+  height: 2rem;
+  color: #000000;
+
+  span {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #000000;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+
+  &:hover span {
+    transform: scale(1.2);
+  }
+}

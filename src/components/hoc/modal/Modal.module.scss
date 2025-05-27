@@ -1,0 +1,121 @@
+@import '../../../assets/styles/main';
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.171);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  overflow-y: scroll;
+}
+
+.modal-content {
+  border-radius: 22px;
+  background: #fff;
+  width: clamp(330px, 90vw, 1000px);
+  max-width: 600px;
+  position: relative;
+  animation: slide-up-fade-in 0.3s ease-out forwards;
+}
+@keyframes slide-up-fade-in {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.content {
+  max-height: 80vh;
+  overflow: auto;
+  padding: 1rem 1.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.title-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+
+  .exit-img {
+    cursor: pointer;
+    height: 20px;
+  }
+}
+.page-title {
+  font-size: var(--font-size-18);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+// .horizantalLine {
+//   border-bottom: 1px solid #d1d1d1;
+//   // padding: 0.5rem 0;
+// }
+.sub-title {
+  color: #f3223c;
+  font-weight: 700;
+  font-size: var(--font-size-16);
+  text-transform: capitalize;
+  padding: 0.8rem 0rem;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 100ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 100ms;
+}
+
+.small {
+  width: clamp(330px, 40vw, 1000px);
+  @include respond-to(xl) {
+    width: clamp(200px, 50vw, 1000px);
+  }
+  @include respond-to(sm) {
+    width: clamp(200px, 90vw, 1000px);
+  }
+}

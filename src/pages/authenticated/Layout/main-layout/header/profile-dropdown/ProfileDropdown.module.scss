@@ -1,0 +1,89 @@
+@import '../../../../../../assets/styles/main.scss';
+
+.profile-dropdown {
+  position: relative;
+  display: flex;
+  justify-content: baseline;
+  background-color: $white;
+  height: min-content;
+  gap: 10px;
+  padding: 0.4rem 1rem 0.4rem 0.8rem;
+  border-radius: 7px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  @include respond-to(lg) {
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+  cursor: pointer;
+  .arrow {
+    width: 0.8rem;
+  }
+}
+
+.profile-image-container {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+.info {
+  display: flex;
+  min-width: 6rem;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  @include respond-to(lg) {
+    display: none;
+  }
+  .name {
+    font-size: var(--font-size-14);
+    font-weight: 600;
+    color: $primary_color;
+  }
+  .type {
+    font-size: var(--font-size-12);
+    font-weight: 600;
+    color: $placeholder_color;
+  }
+}
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 6px;
+  &.entering {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.exiting {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  @include respond-to(lg) {
+    width: 130px;
+    left: -80px;
+  }
+  .div {
+    color: $primary_color;
+    cursor: 'pointer';
+    font-size: var(--font-size-16);
+    padding: 1rem;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    &:hover {
+      background-color: whitesmoke;
+    }
+  }
+}

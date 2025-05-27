@@ -1,0 +1,39 @@
+@import '../../../assets/styles/main.scss';
+.tabs-container {
+  display: flex;
+  gap: 1.5rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  @include respond-to(sm) {
+    padding-bottom: 5px;
+  }
+  &.grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+  &.grid .tab {
+    border: 0.5px solid $lightBlue_color;
+  }
+  .tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 0.5px solid $lightBlue_color;
+    justify-content: center;
+
+    &.active {
+      background-color: $lightBlue_color;
+      color: $primary_color;
+    }
+    &:hover {
+      background-color: #f0f4f8;
+    }
+  }
+}

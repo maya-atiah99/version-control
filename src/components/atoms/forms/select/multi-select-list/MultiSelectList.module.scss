@@ -1,0 +1,214 @@
+@import '../../../../../assets/styles/main';
+
+.select-container {
+  width: 100%;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  .labelCont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      height: 14px;
+      cursor: pointer;
+    }
+  }
+  .select-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.7rem 0.8rem;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 38px;
+    cursor: pointer;
+    .svg {
+      width: 20px;
+    }
+    &:focus {
+      outline: none;
+      border-color: darken($primary_color, 10%);
+    }
+    .select-display {
+      display: flex;
+      align-items: center;
+    }
+
+    .select {
+      outline: none;
+      border: none;
+      width: 100%;
+      // color: $placeholder;
+      background-color: $white;
+      // padding: 0.5rem;
+      cursor: pointer;
+      background-color: transparent;
+      text-transform: capitalize;
+      font-size: var(--font-size-14);
+      &.has-value {
+        color: black;
+      }
+    }
+    .arrow {
+      margin-right: 5px;
+      width: 15px;
+    }
+  }
+}
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  max-height: 20vh;
+  overflow-y: auto;
+  z-index: 9999;
+  margin-top: 0.1rem;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  &.dropdown-animation {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .option {
+    padding: 0.5rem;
+    background-color: $white;
+    font-size: var(--font-size-14);
+
+    cursor: pointer;
+    z-index: 999;
+
+    &:nth-child(odd) {
+      background-color: #f4f4f4;
+    }
+
+    &:nth-child(even) {
+      background-color: white;
+    }
+    &.selected {
+      background-color: #020a58;
+    }
+    &:hover {
+      background-color: grey;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary_color;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($primary_color, 20%);
+  }
+}
+
+.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  text-transform: capitalize;
+  font-size: var(--font-size-16);
+  font-weight: 600;
+  // color: $primary_color;
+}
+
+.disable-scroll {
+  overflow: hidden !important;
+}
+
+.expand-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  border-radius: 50%;
+  padding: 0.1rem 0.3rem;
+  height: 25px;
+  margin-top: 4px;
+  img {
+    filter: $filterRed;
+    height: 12px;
+  }
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selected-items-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+  .selected-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    padding: 0.5rem;
+    border-radius: 50px;
+    background-color: #e0edfd;
+    gap: 1rem;
+    font-size: var(--font-size-14);
+    font-weight: 600;
+    img {
+      cursor: pointer;
+    }
+    p {
+      max-width: 184px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+
+    span {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid rgb(0, 0, 255);
+      padding: 0.2rem;
+      img {
+        transform: rotate(135deg);
+        height: 11px;
+        filter: brightness(0) saturate(100%) invert(14%) sepia(80%)
+          saturate(2663%) hue-rotate(209deg) brightness(97%) contrast(116%);
+      }
+    }
+  }
+}
+
+.no-options {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-16);
+  font-weight: 600;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.folder-container {
+  display: flex;
+  gap: 1rem;
+}

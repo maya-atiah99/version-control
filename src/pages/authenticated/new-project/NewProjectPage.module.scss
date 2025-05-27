@@ -1,0 +1,20 @@
+.cont {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  @include respond-to(sm) {
+    gap: 1rem;
+  }
+
+  .section {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    @include respond-to(sm) {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+  }
+}

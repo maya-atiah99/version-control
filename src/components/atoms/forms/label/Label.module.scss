@@ -1,0 +1,12 @@
+// @import '../../../../assets/styles/main';
+
+.label {
+  font-size: var(--font-size-14);
+  font-weight: 500;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.hover {
+  cursor: pointer;
+}

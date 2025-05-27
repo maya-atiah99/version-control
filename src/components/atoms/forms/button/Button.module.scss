@@ -1,0 +1,57 @@
+@import '../../../../assets/styles/colors/colors';
+
+.button {
+  font-size: var(--font-size-14);
+  padding: 7px 10px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid transparent;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: $primary_color;
+  transition: all 0.1s ease-in-out;
+  border: 1px solid $primary_color;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $primary_color;
+    p {
+      color: $primary_color;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  p {
+    color: $white;
+    text-align: center;
+    font-size: var(--font-size-14);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0;
+  }
+}
+.svg {
+  height: 15px;
+}
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  .image {
+    width: 17px;
+    height: 17px;
+  }
+}

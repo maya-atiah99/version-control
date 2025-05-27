@@ -1,0 +1,83 @@
+@import '../../../../assets/styles/main.scss';
+.cont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: var(--font-size-14);
+  border-radius: 10px;
+  background-color: white;
+  padding-top: 1rem;
+  @include respond-to(sm) {
+    font-size: var(--font-size-14);
+  }
+}
+.wider {
+  padding: 0rem;
+}
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-container thead {
+  position: sticky;
+  top: -7px;
+  z-index: 1;
+  background: #ecf4ff;
+}
+.table-container thead th:first-child,
+.table-container tbody td:first-child {
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+.table-container thead th:last-child,
+.table-container tbody td:last-child {
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+.table-container th {
+  padding: 1rem;
+}
+.table-container td {
+  padding: 1rem;
+}
+.table-container th,
+.table-container td {
+  border: none;
+  white-space: nowrap;
+}
+.table-container tbody td {
+  // max-width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 400;
+}
+.table-container thead tr {
+  border-radius: 10px !important;
+}
+.table-container thead th {
+  text-align: left;
+  font-weight: 500;
+}
+.table-container thead th > img {
+  vertical-align: middle;
+}
+.table-container tr:nth-child(even) {
+  border-radius: 10px;
+  background-color: #fafafc;
+}
+.table-container tr:nth-child(even):hover {
+  background-color: #0066ff0a;
+}
+tbody tr:hover {
+  transition: 0.12s;
+  background-color: #0066ff0a;
+}
+tbody tr:hover .noData {
+  background-color: none !important;
+}

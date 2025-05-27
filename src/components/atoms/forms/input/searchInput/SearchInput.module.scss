@@ -1,0 +1,53 @@
+.search-input-container {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    padding:5px 10px;
+    border-radius: 6px;
+    border: 1px solid #999999;
+    align-items: center;
+    img {
+      height: 15px;
+    }
+    .input {
+      outline: none;
+      border: none;
+      width: 100%;
+      background-color: transparent;
+      font-size: var(--font-size-18);
+      text-transform: capitalize;
+
+      &:focus {
+        border-color: #020a58;
+      }
+
+      &::placeholder {
+        border-color: #020a58;
+        // color:#020A58;
+      }
+    }
+
+    .placeholder {
+      position: absolute;
+      bottom: 5px;
+    }
+  }
+  .password-toggle {
+    position: absolute;
+    width: 30px;
+    height: 90%;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5px;
+    top: 0px;
+    cursor: pointer;
+    background-color: white;
+  }
+}

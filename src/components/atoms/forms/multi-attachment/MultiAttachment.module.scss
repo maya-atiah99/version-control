@@ -1,0 +1,95 @@
+@import '../../../../assets/styles/main.scss';
+.input-container {
+  width: 100%;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #999999;
+    overflow: hidden;
+    align-items: center;
+
+    .attachments {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-grow: 1;
+    }
+    .svg {
+      width: 15px;
+      height: 15px;
+    }
+    .attachment-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.1rem 0.4rem;
+      background-color: #e6eefa;
+      border-radius: 20px;
+      width: 100px;
+
+      .file-name {
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: var(--font-size-12);
+      }
+
+      .remove-button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: var(--font-size-16);
+        padding: 0;
+        margin-left: 0.5rem;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .input {
+      outline: none;
+      border: none;
+      width: 100%;
+      background-color: transparent;
+      text-transform: capitalize;
+      font-size: var(--font-size-14);
+      display: none;
+    }
+
+    .add-more {
+      margin-left: auto;
+      margin-right: 4px;
+      padding: 4px 4px;
+      p {
+        font-size: var(--font-size-12);
+      }
+    }
+  }
+  .placeholder {
+    font-size: var(--font-size-14);
+    color: $placeholder_color;
+  }
+  .custom-upload-button {
+    color: white;
+    border-radius: 0.3rem;
+    text-align: center;
+    font-size: var(--font-size-14);
+    border: none;
+    transition: background-color 0.3s ease;
+    width: 40px;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

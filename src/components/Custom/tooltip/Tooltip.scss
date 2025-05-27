@@ -1,0 +1,14 @@
+@import '../../../assets/styles/colors/colors';
+.tippy-box {
+  border-radius: 6px !important;
+  background-color: $yellow_color !important;
+  font-weight: 400;
+}
+
+.tippy-box.red-tooltip {
+  background-color: $red_color !important;
+}
+.tippy-box.padding-tooltip {
+  padding: 5px;
+  border-radius: 6px !important;
+}

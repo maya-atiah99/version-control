@@ -1,0 +1,56 @@
+@import '../../../../assets/styles/main';
+
+.input-container {
+  width: 100%;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #999999;
+    background-color: white;
+    align-items: center;
+    .img-input-cont {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex: 1;
+    }
+    .svg {
+      width: 15px;
+      height: 15px;
+    }
+    .input {
+      outline: none;
+      border: none;
+      width: 100%;
+      background-color: transparent;
+      font-size: var(--font-size-14);
+      cursor: pointer;
+
+      &::placeholder {
+        color: $placeholder_color;
+        font-size: var(--font-size-14);
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .error-message {
+    font-size: var(--font-size-12);
+    color: red;
+    text-transform: capitalize;
+  }
+
+  .input-error {
+    border: 1px solid red !important;
+    border-radius: 38px;
+  }
+}

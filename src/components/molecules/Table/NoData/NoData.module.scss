@@ -1,0 +1,19 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center !important;
+  background-color: white;
+  padding: 5px 0;
+  p {
+    font-size: var(--font-size-14);
+  }
+  img {
+    filter: none !important;
+    height: 200px;
+    cursor: auto;
+    @include respond-to(sm) {
+      height: 70px;
+    }
+  }
+}

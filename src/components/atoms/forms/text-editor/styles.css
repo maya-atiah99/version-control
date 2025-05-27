@@ -1,0 +1,101 @@
+.ql-editor {
+  min-height: 200px !important;
+  /* max-height: 350px !important; */
+  font-size: 18px;
+  /* add var */
+  border-radius: 8px;
+}
+
+/* 
+#toolbar {
+  display: flex; 
+  background-color: whitesmoke;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+} */
+
+.ql-formats button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.ql-formats button:hover {
+  color: #d4af37;
+  transform: scale(1.1);
+}
+
+.ql-formats select {
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.5rem;
+  border: 1px solid #555;
+  margin: 0 0.5rem;
+}
+
+.ql-formats select:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.ql-font {
+  background-color: whitesmoke;
+  color: #fff;
+}
+
+.ql-editor.ql-blank::before {
+  font-size: 14px;
+  font-style: normal !important;
+  font-weight: 400;
+}
+
+.ql-font:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.textEditorCont {
+  border-radius: 10px;
+  /* height: 200px; */
+  border: 1px solid #dfdfdf !important;
+}
+
+.ql-toolbar.ql-snow {
+  border: none !important;
+  /* border-bottom: 1px solid #EEE !important; */
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+.ql-insertCustomTags {
+  /* background-color: whitesmoke; */
+  border-bottom: 1px solid #eee !important;
+  color: black;
+  border-radius: 4px;
+  background-color: white !important;
+  padding: 0.5rem;
+  border: 1px solid #555;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 150px;
+}
+
+.ql-insertCustomTags:focus,
+.ql-insertCustomTags:hover {
+  border-color: #d4af37;
+  background-color: white !important;
+  color: black;
+}
+
+.toolbar-save-container {
+  position: absolute;
+  padding: 0.5rem;
+  right: 5px;
+  top: 2px;
+  cursor: pointer;
+}

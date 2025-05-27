@@ -1,0 +1,33 @@
+@import '../../../../../assets/styles/main.scss';
+.frontend {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    h3 {
+      font-size: var(--font-size-16);
+      font-weight: 500;
+    }
+  }
+  .fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+.button {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}

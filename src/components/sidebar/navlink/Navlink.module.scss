@@ -1,0 +1,111 @@
+@import '../../../assets/styles/main.scss';
+.nav {
+  width: 100%;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+}
+.nav-link {
+  display: flex;
+  width: 80px;
+  padding: 5px 6px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  p {
+    text-align: center;
+    font-size: var(--font-size-16);
+    margin: 0;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover,
+  &.active {
+    background-color: white;
+    color: $primary_color;
+    // --mask: radial-gradient(20px at 100%, #0000 98%, #000) 0;
+    // -webkit-mask: var(--mask);
+
+    p {
+      color: $primary_color;
+    }
+    .icon {
+      color: $primary_color;
+    }
+    path {
+      filter: brightness(0) saturate(100%) invert(20%) sepia(94%)
+        saturate(2429%) hue-rotate(190deg) brightness(95%) contrast(99%);
+    }
+  }
+}
+
+.nav-link-open {
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .icon {
+    width: 20px;
+    height: 15px;
+    transition: fill 0.3s ease;
+  }
+}
+
+.nav-children {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-top: 1rem;
+  &.close {
+    margin-left: 0px;
+    align-items: center;
+  }
+  .nav-child-link {
+    padding: 5px 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    border-radius: 6px;
+    color: white;
+    p {
+      font-weight: 500;
+      font-size: var(--font-size-14);
+    }
+    .icon {
+      aspect-ratio: 3/2;
+      width: 25px;
+      object-fit: contain;
+    }
+    &:hover,
+    &.active {
+      background-color: white;
+      color: $primary_color;
+      p {
+        color: $primary_color;
+      }
+      .icon {
+        color: $primary_color;
+        path {
+          filter: brightness(0) saturate(100%) invert(20%) sepia(94%)
+            saturate(2429%) hue-rotate(190deg) brightness(95%) contrast(99%);
+        }
+      }
+    }
+  }
+}

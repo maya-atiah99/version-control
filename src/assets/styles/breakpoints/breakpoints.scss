@@ -1,0 +1,41 @@
+$screen-xs: 30em;
+$screen-sm: 48em;
+$screen-md: 64em;
+$screen-lg: 75em;
+$screen-xl: 90em;
+$screen-xxl: 100em;
+$screen-3xl: 110em;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $screen-xs) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (max-width: $screen-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $screen-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: $screen-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: $screen-xl) {
+      @content;
+    }
+  } @else if $breakpoint == xxl {
+    @media (max-width: $screen-xxl) {
+      @content;
+    }
+  } @else if $breakpoint == 3xl {
+    @media (max-width: $screen-3xl) {
+      @content;
+    }
+  } @else {
+    @warn " Unknown breakpoint: #{$breakpoint}";
+  }
+}
